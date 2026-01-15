@@ -51,7 +51,38 @@ API-first Django backend for managing event programs.
 
 ---
 
-### API Endpoints
+### API Endpoints and Documentation
+
+**Setup Authentication**
+
+Since the API uses Django session authentication, you need to authenticate first:
+
+### Option 1: Using Django Admin (Recommended for Testing)
+
+1. Make sure your server is running: `python manage.py runserver`
+2. Create a superuser if you haven't: `python manage.py createsuperuser`
+3. In your browser, go to: `http://127.0.0.1:8000/admin/`
+4. Log in with your superuser credentials
+5. In Postman, all requests will now use the session cookie from your browser
+
+**Note**: Postman shares cookies with your browser if they're from the same domain.
+
+### Option 2: Manual Cookie Setup (Alternative)
+
+If Option 1 doesn't work:
+
+1. Log in to Django admin in your browser
+2. Open browser DevTools → Application/Storage → Cookies
+3. Copy the `sessionid` cookie value
+4. In Postman:
+   - Go to any request
+   - Click **Cookies** (below the URL bar)
+   - Add a cookie:
+     - Domain: `127.0.0.1`
+     - Path: `/`
+     - Name: `sessionid`
+     - Value: `<paste your session id>`
+     
 
 **Program Management** (Authenticated Users Only)
 - `POST /api/programs/` - Create a new program
