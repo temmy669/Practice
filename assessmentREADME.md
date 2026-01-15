@@ -231,12 +231,6 @@ coverage report
 
 ---
 
-##Got it! That section is pretty detailed already, but it **still reads like a generic plan**. Since your current test suite is very concrete and organized into multiple classes, we can make this section **reflect exactly what exists**, so a reviewer can quickly understand what’s covered and where to look.
-
-Here’s a **revised version for your README**:
-
----
-
 ## Testing Strategy
 
 ### Test Suite Overview
