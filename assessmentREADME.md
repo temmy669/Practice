@@ -282,7 +282,6 @@ The test suite is organized into **five main test files**, containing classes fo
 
 * **API testing** is done with `APIClient` and `force_authenticate()` for simulating authenticated requests.
 * Tests use **isolated setup**; each test creates its own users, programs, and items.
-* Datetime fields use **timezone-aware values** to prevent errors during validation.
 * Tests are designed to be **modular**, making it easier to maintain and expand.
 * **Edge cases** include:
 
