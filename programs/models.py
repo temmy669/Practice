@@ -12,6 +12,7 @@ class Program(models.Model):
     Programs can be shared publicly via a unique, non-guessable share token.
     Programs remain editable even after being shared.
     """
+    #future optimization: add composite indexing on (owner, created_at) for faster user program listing
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True)
     date = models.DateField()
